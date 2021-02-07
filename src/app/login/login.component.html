@@ -1,0 +1,19 @@
+    <!-- LOGIN -->
+    <div class="form-popup" id="myForm">
+        <form  class="form-container">
+        <h1>Login</h1>
+    
+        <label for="user_id"><b>User Name</b></label>
+        <input type="text" [(ngModel)]="loginDetails.requestedUserName" placeholder="Enter User Id" name="user_id" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" [(ngModel)]="loginDetails.requestedPassword" placeholder="Enter Password" name="psw" required>
+    
+        <button type="submit" class="btn" (click)="register()" >Login</button>
+        <button type="button" class="btn cancel" (click)="closeForm()" routerLink="/home">Close</button>
+        </form>
+    </div>
+    <div>
+        <h1>{{message}}</h1> 
+    </div>
+

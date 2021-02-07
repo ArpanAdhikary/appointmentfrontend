@@ -1,0 +1,17 @@
+<div class="form-popup" id="myForm">
+    <form  class="form-container">
+    <h1>Delete Appointment</h1>
+
+    <label for="user_Id"><b>User Id  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.requestedUserId"  placeholder="Enter User Id" name="user_id" required>
+    <input type="checkbox" (click)="checker()" placeholder="Delete One Appointment" id="deletecheck" name="deletecheck">
+    <label for="deleteOne"><b>Select to delete only 1 record of the user  </b></label>
+        <br>
+    <div *ngIf="check!=null">
+    <label for="appointment_Id"><b>Appointment Id  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.requestedAppointedId" placeholder="Enter Appointment Id" name="appointment_id" required>
+    </div>
+    <button type="submit" class="btn" (click)="delete()" >Delete</button>
+    <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+</div>

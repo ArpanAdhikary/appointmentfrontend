@@ -1,0 +1,56 @@
+<div class="form-popup" id="myForm">
+    <form  class="form-container">
+    <h1>Search By Id</h1>
+
+    <label for="user_Id"><b>User Id  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.requestedUserId" placeholder="Enter User Id" name="user_id" required>
+    <button type="submit" class="btn" (click)="searchAppointmentById()" >Search</button>
+    <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+</div>
+<div class="form-popup-textarea" id="myForms">
+    <form  class="form-container-textarea">
+        <table class="table table-bordered" id="results" name="results">
+            <tr>
+                <th>
+                    Appointment Id
+                </th>
+                <th>
+                    User Id
+                </th>
+                <th>
+                    Creator Id
+                </th>
+                <th>
+                     Date
+                </th>
+                <th>
+                    Time
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+            <tr *ngFor="let appoint of appointmentRecord">
+                <td>
+                    {{appoint.appointmentId}}
+                </td>
+                <td>
+                    {{appoint.userId}}
+                </td>
+                <td>
+                    {{appoint.creatorId}}
+                </td>
+                <td>
+                    {{appoint.date}}
+                </td>
+                <td>
+                    {{appoint.time}}
+                </td>
+                <td>
+                    {{appoint.description}}
+                </td>
+            </tr>
+        </table>        
+    </form>
+</div>

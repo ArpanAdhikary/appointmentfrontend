@@ -1,0 +1,32 @@
+<div class="form-popup" id="myForm">
+    <form  class="form-container">
+    <h1>Registration</h1>
+
+    <label for="user_name"><b>User Name  </b></label>
+    <input type="text" [(ngModel)]="userRegister.username" placeholder="Enter User Name" name="user_name" required>
+
+    <label for="name"><b>Name  </b></label>
+    <input type="text" [(ngModel)]="userRegister.name" placeholder="Enter Name" name="name" required>
+        <br>
+    
+    <label for="mobile"><b>Mobile No.  </b></label>
+    <input type="tel" [(ngModel)]="userRegister.mobileNo" placeholder="Enter Mobile No." name="mobile" pattern="(0/91)?[7-9][0-9]{9}" required>
+
+    <label for="email"><b>Email  </b></label>
+    <input type="email" [(ngModel)]="userRegister.emailId" placeholder="Enter Email id" name="email" required>
+
+    <label class="Rollbl" for="role"><b>Role  </b></label>
+    <input type="radio" (click)="roleInput()" id="admin" name="role" value="Admin">
+    <label for="admin">Admin</label>
+    <input type="radio" (click)="roleInput()" id="user" name="role" value="User">
+    <label for="user" >User</label>
+    <input type="radio" (click)="roleInput()" id="readOnlyUser" name="role" value="ReadOnly-User">
+    <label for="readOnlyUser">ReadOnly-User</label>
+  
+    <label for="password"><b>Password  </b></label>
+    <input class="PswInp" [(ngModel)]="userRegister.password" type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn" (click)="register()" >Register</button>
+    <button type="button" class="btn cancel" (click)="closeForm()" routerLink="/admin">Close</button>
+    </form>
+</div>

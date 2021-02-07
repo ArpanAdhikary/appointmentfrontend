@@ -1,0 +1,28 @@
+<div class="form-popup" id="myForm">
+    <form  class="form-container">
+    <h1>Update Appointment</h1>
+
+    <label for="appointment_id"><b>Appointment Id</b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.requestedAppointmentId" placeholder="Enter Appointment Id" name="appointment_id" required>
+
+
+    <label class="Userlbl" for="user_id"><b>User Id  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.requestedUserId" placeholder="Enter User Id" name="user_id" required>
+
+    <label class="Desclbl" for="creator_id"><b>Creator Id  </b></label>
+    <input type="text"  placeholder={{temp.id}} name="creator_id" disabled>
+    
+    <label  for="description"><b>Description  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.requestedDescription" placeholder="Enter Description" name="desc" required>
+<br>
+    <label class="Datelbl" for="date"><b>Date  </b></label>
+    <input type="date" [(ngModel)]="appointmentDetails.requestedDate" placeholder="Enter Date" name="date" required>
+
+    <label  class="Timelbl" for="time"><b>Time  </b></label>
+    <input type="time" [(ngModel)]="appointmentDetails.requestedTime" placeholder="Enter Time" name="time" required>
+
+   
+    <button type="submit" class="btn" (click)="update()" >Update Appointment</button>
+    <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+</div>

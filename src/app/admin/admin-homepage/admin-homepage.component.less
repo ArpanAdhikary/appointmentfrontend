@@ -1,0 +1,73 @@
+.container{
+    background-color:blue;
+    background-image: url('/assets/images/AMS_HOMEPAGE.jpg');
+    overflow-y: scroll;
+    width: 78rem;
+    height: 36rem;
+    align-content: center;
+    font-family: cursive;      
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+    button {
+    width: 150px;
+    background-color: #333;
+    display: inline-block;
+    color:white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li button:hover {
+    background-color: #3e8e41;
+  }
+  li button:focus{
+    background-color: #37c23c;
+  }  
+  .activated{
+    background-color: #37c23c;
+  }
+  .logo{
+    float:right;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    
+  }
+  
+
+  .dropdown-content {
+    display: none;
+    position: fixed;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}

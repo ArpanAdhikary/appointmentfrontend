@@ -1,0 +1,25 @@
+<div class="form-popup" id="myForm">
+    <form  class="form-group form-container">
+    <h1>Book Appointment</h1>
+
+    <label for="user_id"><b>User Id  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.userId" placeholder="Enter User Id" name="user_id" required>
+
+    <label for="creator_id"><b>Creator Id  </b></label>
+    <input class="Design" data-toggle="tooltip" data-placement="top" title="{{temp.username}}" type="text" [(ngModel)]="appointmentDetails.creatorId" placeholder={{temp.id}}  name="creator_id" disabled>   
+    
+    <br>
+    
+    <label class="Datelbl" for="date"><b>Date  </b></label>
+    <input class=CreatorInp type="date" [(ngModel)]="appointmentDetails.date" placeholder="Enter Date" name="date" required>
+
+    <label class="Timelbl" for="time"><b>Time  </b></label>
+    <input type="time" [(ngModel)]="appointmentDetails.time" placeholder="Enter Time" name="time" required>
+
+    <label class="Pswlbl" for="description"><b>Description  </b></label>
+    <input type="text" [(ngModel)]="appointmentDetails.description" placeholder="Enter Description" name="desc" required>
+
+    <button type="submit" class="btn" (click)="book()" >Book Appointment</button>
+    <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+    </form>
+</div>

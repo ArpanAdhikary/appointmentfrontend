@@ -1,0 +1,10 @@
+<div class=" form-popup" id="myForm">
+    <form  class="form-group form-container">
+    <h1>UnRegister</h1>
+
+    <label for="user_Id"><b>User Id  </b></label>
+    <input type="text" [(ngModel)]="userUnRegister.requestedUserId" placeholder="Enter User Id" name="user_id" required>
+    <button type="submit" class="btn" (click)="unRegister()" >Unregister</button>
+    <button type="button" class="btn cancel" (click)="closeForm()" routerLink="/admin">Close</button>
+    </form>
+</div>

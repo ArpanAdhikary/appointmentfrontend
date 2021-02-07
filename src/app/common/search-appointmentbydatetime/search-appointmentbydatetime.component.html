@@ -1,0 +1,59 @@
+<div class="form-popup" id="myForm">
+    <form  class="form-container">
+    <h3>Search By Date & Time</h3>
+        <br>
+    <label for="date"><b>Date  </b></label>
+    <input type="date" [(ngModel)]="appointmentDetails.requestedDate" placeholder="Enter Date" name="date" required><br><br>
+    <label for="time"><b>Time  </b></label>
+    <input type="time" [(ngModel)]="appointmentDetails.requestedTime" placeholder="Enter Time" name="time" required><br><br>
+    <button type="submit" class="btn" (click)="searchAppointmentByDateTime()" >Search</button>
+    <button type="button" class="btn cancel" (click)="closeForm()" >Close</button>
+    </form>
+</div>
+<div class="form-popup-textarea" id="myForms">
+    <form  class="form-container-textarea">
+        <table class="table table-bordered" id="results" name="results">
+            <tr>
+                <th>
+                    Appointment Id
+                </th>
+                <th>
+                    User Id
+                </th>
+                <th>
+                    Creator Id
+                </th>
+                <th>
+                     Date
+                </th>
+                <th>
+                    Time
+                </th>
+                <th>
+                    Description
+                </th>
+            </tr>
+            <tr *ngFor="let appoint of appointmentRecord">
+                <td>
+                    {{appoint.appointmentId}}
+                </td>
+                <td>
+                    {{appoint.userId}}
+                </td>
+                <td>
+                    {{appoint.creatorId}}
+                </td>
+                <td>
+                    {{appoint.date}}
+                </td>
+                <td>
+                    {{appoint.time}}
+                </td>
+                <td>
+                    {{appoint.description}}
+                </td>
+            </tr>
+        </table>        
+    </form>
+</div>
+

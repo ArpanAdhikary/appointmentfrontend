@@ -1,0 +1,35 @@
+<body>
+  <div class="container" style="overflow-y: scroll;">
+     
+      <nav>
+          <ul> 
+              <li><button routerLink="/user">Home</button></li>
+              <li> 
+                      <div class="dropdown">
+                        <button class="dropbtn">Appointment</button>
+                        <div class="dropdown-content">
+                          <a routerLink="/user/book">Book</a>
+                          <a routerLink="/user/update">Update</a>
+                          <a routerLink="/user/delete">Delete</a>
+                        </div>
+                      </div>     
+              </li>
+              <li> 
+                  <div class="dropdown">
+                    <button>Search</button>
+                    <div class="dropdown-content">
+                      <a routerLink="/user/search/date/time">Appointment by date and time</a>
+                      <a routerLink="/user/search/id">Appointment by id</a>
+                    </div>
+                  </div>     
+          </li>
+         
+              <li><button  routerLink="/home">Logout</button></li>
+              <li class="logo">APPOINTEMENT MANAGEMENT SYSTEM</li>
+          </ul>     
+      </nav>
+      
+              <router-outlet></router-outlet>
+  </div>
+  
+</body>
